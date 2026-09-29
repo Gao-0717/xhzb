@@ -21,6 +21,7 @@ logging:
   level:
     com.xhzb: debug
     org.springframework: warn
+    org.springframework.ai: debug #ai对话日志
 
 # Spring配置
 spring:
@@ -61,6 +62,13 @@ spring:
       jedis:
         pool:
           enabled: true
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY}  #读取环境变量中的api key
+      base-url: https://dashscope.aliyuncs.com/compatible-mode
+      chat:
+        options:
+          model: qwen3.8-flash
 # Springdoc配置
 springdoc:
   api-docs:
@@ -80,3 +88,4 @@ oss:
   accessKeyId: ${OSS_ACCESS_KEY_ID}
   accessKeySecret: ${OSS_ACCESS_KEY_SECRET}
   bucketName: xhzb-gzf
+
