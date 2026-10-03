@@ -69,6 +69,11 @@ spring:
       chat:
         options:
           model: qwen3.8-flash
+
+      embedding:
+        options:
+          model: qwen3.7-text-embedding-flash
+          dimensions: 1024
 # Springdoc配置
 springdoc:
   api-docs:
